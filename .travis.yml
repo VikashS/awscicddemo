@@ -3,10 +3,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t vikashs/AwsCICDDemo -f Dockerfile.dev .
+  - docker build -t vikashs/awscicddemo -f Dockerfile.dev .
 
 script:
-  - docker run vikashs/AwsCICDDemo npm run test -- --coverage
+  - docker run vikashs/awscicddemo npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
